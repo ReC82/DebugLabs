@@ -1,0 +1,14 @@
+---
+- name: Generate Blog Post HTML
+  hosts: localhost
+  vars:
+    post_title: "Introduction to Jinja Templates"
+    author: "John Doe"
+    post_content: |
+      Jinja is a templating engine used in web development for generating dynamic content. It provides a flexible and powerful way to incorporate dynamic data into HTML templates.
+    publication_date: "2024-03-27"
+  tasks:
+    - name: Render Jinja template
+      template:
+        src: blog_post_template.html.j2
+        dest: /var/www/html/blog_post.html

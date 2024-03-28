@@ -1,10 +1,10 @@
 # Sensitive
-/lab0*_debug/.terraform
+*/lab0*_debug/.terraform
 *.lock.hcl
-/lab0*_debug/providers.tf
-/lab0*_debug/commands.txt
-/lab0*_debug/private_nodes.txt
-/lab0*_debug/raw_node_names.txt
+*/lab0*_debug/providers.tf
+*/lab0*_debug/commands.txt
+*/lab0*_debug/private_nodes.txt
+*/lab0*_debug/raw_node_names.txt
 
 # Local .terraform directories
 **/.terraform/*
