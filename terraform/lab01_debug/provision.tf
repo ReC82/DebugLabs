@@ -7,8 +7,7 @@ resource "null_resource" "controller_provision" {
       "echo '${tls_private_key.ssh_key_linux_openssh.private_key_openssh}' > /home/rooty/.ssh/id_rsa",
       "chmod 600 /home/rooty/.ssh/id_rsa",
       "dos2unix private_nodes.txt",
-      "sudo sed -i 's/^#host_key_checking = False/host_key_checking = False/' /etc/ansible/ansible.cfg",
-      "sudo cp -f private_nodes.txt /etc/ansible/hosts"
+      "sudo sed -i 's/^#host_key_checking = False/host_key_checking = False/' /etc/ansible/ansible.cfg"
     ]
     connection {
       type        = "ssh"
