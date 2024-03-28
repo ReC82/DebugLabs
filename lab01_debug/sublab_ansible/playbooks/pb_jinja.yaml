@@ -1,0 +1,10 @@
+- name: Playbook Test de Template
+  hosts: all
+  vars:
+    var1: "Busniness !!!"
+  
+  tasks:
+    - name: Template
+      template:
+        src: myjinja.j2
+        dest: "/tmp/hello.txt"
