@@ -2,7 +2,6 @@ resource "null_resource" "controller_provision" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt-get -y update",
-      "sudo apt-add-repository --yes --update ppa:ansible/ansible",
       "sudo apt-get -y install ansible dos2unix git",
       "mkdir -p /home/rooty/.ssh",
       "echo '${tls_private_key.ssh_key_linux_openssh.private_key_openssh}' > /home/rooty/.ssh/id_rsa",

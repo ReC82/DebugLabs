@@ -32,8 +32,7 @@ resource "null_resource" "cp_iplist" {
   }
   depends_on = [null_resource.output_private_ips]
 }
-# terraform apply -replace null_resource.output_private_ips -replace null_resource.cp_iplist
-/* This will stuck the ansible installation
+/* 
 resource "null_resource" "copy_node_list" {
   provisioner "remote-exec" {
     connection {
